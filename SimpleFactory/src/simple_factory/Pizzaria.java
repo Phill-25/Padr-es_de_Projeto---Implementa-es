@@ -1,10 +1,10 @@
 package simple_factory;
 
 public class Pizzaria {
-		
+	protected Pizza novaPizza = null;
 	public Pizza fazPizza(String sabor, String tamanho) {
 		
-		Pizza novaPizza = null;
+		
 		
 		if(sabor.equals("Calabresa") && tamanho.equals("M") ) {
 			
