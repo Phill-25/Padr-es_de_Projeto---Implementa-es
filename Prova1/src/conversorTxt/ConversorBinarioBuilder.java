@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class BuilderConversorOCT extends ConversorTXT {
+public class ConversorBinarioBuilder extends ConversorTXT {
 
 	public void converte(String local, String destino) {
 		String Nlinha ="";
@@ -29,6 +29,7 @@ public class BuilderConversorOCT extends ConversorTXT {
 				System.out.println(linha);
 				if(linha == null)	break;
 
+//				linha = linha.toLowerCase();
 
 
 				for (int i = 0; i < linha.length(); i++) {
@@ -39,19 +40,18 @@ public class BuilderConversorOCT extends ConversorTXT {
 						cod = linha.charAt(i);
 						ascii = (int)cod;
 						
-						Nlinha += String.valueOf(Integer.toOctalString(ascii)+"-");
+						Nlinha += String.valueOf(Integer.toBinaryString(ascii)+"-");
 
 					}else if(linha.charAt(i) >= '0' && linha.charAt(i)<= '9'){
 						cod = linha.charAt(i);
 						ascii = (int)cod;
 
-						Nlinha += String.valueOf(Integer.toOctalString(ascii)+"-");
+						Nlinha += String.valueOf(Integer.toBinaryString(ascii)+"-");
 
 					}else{
 						cod = linha.charAt(i);
 						ascii = (int)cod;
-
-						Nlinha += String.valueOf(Integer.toOctalString(ascii)+"-");
+						Nlinha += String.valueOf(Integer.toBinaryString(ascii)+"-");
 					}
 
 

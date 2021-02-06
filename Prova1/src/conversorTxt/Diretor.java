@@ -19,16 +19,16 @@ public class Diretor {
 				int escolha = in.nextInt();
 
 				if (escolha == 1) {
-					conversor = new ConversorDirector(new BuilderConversorBinario());
+					conversor = new ConversorDirector(new ConversorBinarioBuilder());
 					conversor.converteArquivo();
 				} else if(escolha == 2) {
-					conversor = new ConversorDirector(new BuilderConversorHex());
+					conversor = new ConversorDirector(new ConversorHexBuilder());
 					conversor.converteArquivo();
 				}else if(escolha == 3) {
-					conversor = new ConversorDirector(new BuilderConversorOCT());
+					conversor = new ConversorDirector(new ConversorOCTBuilder());
 					conversor.converteArquivo();
 				}else if(escolha ==  4) {
-					conversor = new ConversorDirector(new BuilderConversorASCII());
+					conversor = new ConversorDirector(new ConversorASCIIBuilder());
 					conversor.converteArquivo();
 				}else if(escolha == 0) {
 					System.out.println("Até a próxima!");

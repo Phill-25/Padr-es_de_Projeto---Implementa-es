@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class BuilderConversorHex extends ConversorTXT {
+public class ConversorHexBuilder extends ConversorTXT {
 
 	public void converte(String local, String destino) {
 		String Nlinha ="";
