@@ -7,7 +7,7 @@ public class Diretor {
 	private static Scanner in;
 
 	public static void main(String[] args) {
-		ConversorTXT conversor;
+		ConversorDiretor conversor;
 
 		//		conversor = new ConversorOCT();
 		//Altere os caminhos e os contrutores
@@ -22,13 +22,17 @@ public class Diretor {
 				int escolha = in.nextInt();
 
 				if (escolha == 1) {
-					conversor = new ConversorBinario();
+					conversor = new ConversorDiretor(new ConversorBinario());
+					conversor.converteArquivo();
 				} else if(escolha == 2) {
-					conversor = new ConversorHex();
+					conversor = new ConversorDiretor(new ConversorHex());
+					conversor.converteArquivo();
 				}else if(escolha == 3) {
-					conversor = new ConversorOCT();
+					conversor = new ConversorDiretor(new ConversorOCT());
+					conversor.converteArquivo();
 				}else if(escolha ==  4) {
-					conversor = new ConversorASCII();
+					conversor = new ConversorDiretor(new ConversorASCII());
+					conversor.converteArquivo();
 				}else if(escolha == 0) {
 					System.out.println("Até a próxima!");
 					break;
@@ -48,7 +52,7 @@ public class Diretor {
 
 				}
 
-				conversor.converte("C:\\Users\\Philipe\\Desktop\\TESTE.txt","C:\\Users\\Philipe\\Desktop\\saida.txt");
+				
 				continue;
 			} catch (Exception e) {
 				// TODO: handle exception
