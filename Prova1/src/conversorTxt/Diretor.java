@@ -7,11 +7,8 @@ public class Diretor {
 	private static Scanner in;
 
 	public static void main(String[] args) {
-		ConversorDiretor conversor;
+		ConversorDirector conversor;
 
-		//		conversor = new ConversorOCT();
-		//Altere os caminhos e os contrutores
-		//		conversor.converte("C:\\Users\\Philipe\\Desktop\\TESTE.txt","C:\\Users\\Philipe\\Desktop\\saida.txt");
 		do {
 			try {
 				in = new Scanner(System.in);
@@ -22,16 +19,16 @@ public class Diretor {
 				int escolha = in.nextInt();
 
 				if (escolha == 1) {
-					conversor = new ConversorDiretor(new BuilderConversorBinario());
+					conversor = new ConversorDirector(new BuilderConversorBinario());
 					conversor.converteArquivo();
 				} else if(escolha == 2) {
-					conversor = new ConversorDiretor(new BuilderConversorHex());
+					conversor = new ConversorDirector(new BuilderConversorHex());
 					conversor.converteArquivo();
 				}else if(escolha == 3) {
-					conversor = new ConversorDiretor(new BuilderConversorOCT());
+					conversor = new ConversorDirector(new BuilderConversorOCT());
 					conversor.converteArquivo();
 				}else if(escolha ==  4) {
-					conversor = new ConversorDiretor(new BuilderConversorASCII());
+					conversor = new ConversorDirector(new BuilderConversorASCII());
 					conversor.converteArquivo();
 				}else if(escolha == 0) {
 					System.out.println("Até a próxima!");
@@ -52,7 +49,7 @@ public class Diretor {
 
 				}
 
-				
+
 				continue;
 			} catch (Exception e) {
 				// TODO: handle exception

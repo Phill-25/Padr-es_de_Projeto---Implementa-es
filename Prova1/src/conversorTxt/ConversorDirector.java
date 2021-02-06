@@ -1,10 +1,10 @@
 package conversorTxt;
 
-public class ConversorDiretor {
+public class ConversorDirector {
 	
 	ConversorTXT conversor;
 	
-	public ConversorDiretor(ConversorTXT conversor) {
+	public ConversorDirector(ConversorTXT conversor) {
 		this.conversor = conversor;
 	}
 	
