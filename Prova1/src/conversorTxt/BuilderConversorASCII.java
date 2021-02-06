@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class ConversorBinario extends ConversorTXT {
+public class BuilderConversorASCII extends ConversorTXT {
 
 	public void converte(String local, String destino) {
 		String Nlinha ="";
@@ -40,18 +40,19 @@ public class ConversorBinario extends ConversorTXT {
 						cod = linha.charAt(i);
 						ascii = (int)cod;
 						
-						Nlinha += String.valueOf(Integer.toBinaryString(ascii)+"-");
+						Nlinha += String.valueOf(ascii+"-");
 
 					}else if(linha.charAt(i) >= '0' && linha.charAt(i)<= '9'){
 						cod = linha.charAt(i);
 						ascii = (int)cod;
 
-						Nlinha += String.valueOf(Integer.toBinaryString(ascii)+"-");
+						Nlinha += String.valueOf(ascii+"-");
 
 					}else{
 						cod = linha.charAt(i);
 						ascii = (int)cod;
-						Nlinha += String.valueOf(Integer.toBinaryString(ascii)+"-");
+
+						Nlinha += String.valueOf(ascii+"-");
 					}
 
 
