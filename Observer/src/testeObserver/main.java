@@ -14,7 +14,6 @@ public class main {
 
 
 		
-		
 		observado1.setEstado("0056");
 		
 		observado2.setEstado("999");
