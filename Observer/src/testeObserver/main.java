@@ -4,19 +4,19 @@ public class main {
 
 	public static void main(String[] args) {
 		
-		ObservadoConcreto insumo1 = new ObservadoConcreto("Observado 1");
+		ObservadoConcreto Refinaria1 = new ObservadoConcreto("Petroleo");
 		
-		ObservadoConcreto produto4 = new ObservadoConcreto("Observado 2");
+		ObservadoConcreto refinaria2 = new ObservadoConcreto("GNV");
 		
-		ObservadorConcreto gerente1 = new ObservadorConcreto(insumo1);
-		ObservadorConcreto gerente2 = new ObservadorConcreto(produto4);
-		ObservadorConcreto gerente3 = new ObservadorConcreto(insumo1);
+		ObservadorConcreto posto1 = new ObservadorConcreto(Refinaria1);
+		ObservadorConcreto posto2 = new ObservadorConcreto(refinaria2);
+		ObservadorConcreto posto3 = new ObservadorConcreto(Refinaria1);
+		ObservadorConcreto posto4 = new ObservadorConcreto(refinaria2);
 
-
 		
-		insumo1.setEstado("insuficiente");
+		Refinaria1.setEstado("R$ 2,50");
 		
-		produto4.setEstado("estoque cheio");
+		refinaria2.setEstado("R$ 1,65");
 		
 		
 	}
